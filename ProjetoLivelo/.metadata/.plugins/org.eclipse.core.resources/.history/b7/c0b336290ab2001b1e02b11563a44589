@@ -1,0 +1,38 @@
+package tests;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class Cadastro {
+	
+	
+	public Response cadastrar() {
+		
+		Response response = RequestSpecification request = RestAssured.given();
+		return response;
+		
+		
+		
+	}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	
+	
+
+}

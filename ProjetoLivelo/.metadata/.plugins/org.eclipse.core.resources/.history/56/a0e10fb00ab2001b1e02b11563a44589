@@ -1,0 +1,52 @@
+package tests;
+
+import static org.junit.Assert.assertEquals;
+
+import org.json.simple.JSONObject;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class Cadastro {
+	
+	
+	public void validarStatusCode() {
+		
+		RequestSpecification request = RestAssured.given();
+		
+		request.header("Content-Type", "application/json");
+
+		JSONObject json = new JSONObject();
+		
+		json.put("admissao", "01/10/2020");
+		json.put("cargo", "desenvolvedor");
+		json.put("comissao", "5.000,00");
+		json.put("cpf", "713.887.130-98");
+		json.put("departamentoId", "1");
+		json.put("nome", "Florisval");
+		json.put("salario", "7.000,00");
+		json.put("sexo", "m");
+		json.put("tipoContratacao", "clt");
+		
+		
+		request.body(json.toJSONString());
+		
+		Response response = request.post("https://inm-test-api.herokuapp.com/empregado/cadastrar");
+		
+		System.out.println(response.asPrettyString());
+		
+		int code = response.getStatusCode();
+		System.out.println("O status code retornando e: " + code);
+		assertEquals(code, 202);
+		
+	}
+		
+		
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Cucumber</title>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22ml-3%20ml-md-0%22%20viewBox%3D%220%200%2040.59%2046.31%22%20width%3D%2240.59%22%20height%3D%2246.31%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%2323d96c%22%20fill-rule%3D%22evenodd%22%20d%3D%22M30.283%203.645q-.528-.317-1.08-.593a16.164%2016.164%200%2000-1.154-.518c-.124-.052-.247-.1-.372-.149-.343-.127-.689-.268-1.042-.371a19.427%2019.427%200%2010-9.792%2037.51v5.56c11.676-1.753%2022.016-10.979%2022.787-23.093.459-7.289-3.193-14.73-9.347-18.346z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20d%3D%22M15.787%2046.307v-5.935A20.472%2020.472%200%201126.959%201.015c.274.08.557.187.832.291l.248.093c.165.064.291.113.417.167.348.137.739.313%201.208.543q.589.295%201.153.633c6.393%203.756%2010.354%2011.518%209.857%2019.316-.763%2012-10.722%2022.122-23.679%2024.067zm4.8-44.214h-.026a18.366%2018.366%200%2000-3.524%2036.408l.85.165v5.18c11.392-2.224%2020.009-11.272%2020.686-21.922.448-7.033-3.1-14.018-8.83-17.383l-.008-.005A14.691%2014.691%200%200027.654%203.5a5.74%205.74%200%2000-.344-.138l-.27-.1a9.49%209.49%200%2000-.708-.249%2018.425%2018.425%200%2000-5.743-.92z%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%23173647%22%20fill-rule%3D%22evenodd%22%20d%3D%22M16.666%2010.58a1.8%201.8%200%20011.583.608%204.184%204.184%200%2001.728%201.107c.645%201.422%201.027%203.461.23%204.605a6.334%206.334%200%2001-3.981-3.087%203.236%203.236%200%2001-.347-1.339%201.957%201.957%200%20011.787-1.894zm-5.683%208.025a7.742%207.742%200%20001.218.737%205.789%205.789%200%20004.883-.138%206.116%206.116%200%2000-3.345-3.45%203.664%203.664%200%2000-1.442-.321%201.884%201.884%200%2000-.319%200%201.766%201.766%200%2000-.995%203.172zm6.1%203.433c-.777-.518-2.379-.309-3.312-.292a4.416%204.416%200%2000-1.666.352%203.5%203.5%200%2000-1.218.738%201.817%201.817%200%20001.409%203.171%203.3%203.3%200%20001.442-.321c1.436-.62%203.141-2.32%203.346-3.648zm2.61%202a6.556%206.556%200%2000-3.724%203.506%203.091%203.091%200%2000-.321%201.314%201.907%201.907%200%20003.3%201.346%207.422%207.422%200%2000.7-1.218c.621-1.333.866-3.72.046-4.948zm2.557-7.167a5.941%205.941%200%20003.7-3.167%203.243%203.243%200%2000.319-1.346%201.915%201.915%200%2000-1.794-1.954%201.832%201.832%200%2000-1.6.641%207.382%207.382%200%2000-.705%201.218c-.62%201.434-.842%203.48.081%204.603zm4.208%2012.115a3.244%203.244%200%2000-.321-1.345%205.869%205.869%200%2000-3.554-3.269%205.386%205.386%200%2000-.226%204.711%204.147%204.147%200%2000.7%201.121c1.133%201.23%203.505.32%203.402-1.218zm4.2-6.28a7.466%207.466%200%2000-1.217-.7%204.425%204.425%200%2000-1.666-.352%206.4%206.4%200%2000-3.188.555%205.959%205.959%200%20003.316%203.386%203.672%203.672%200%20001.442.32%201.8%201.8%200%20001.31-3.209z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E">
+	<style>
+.cucumber-react .cucumber-status--passed {
+  color: #2CB14A;
+}
+.cucumber-react .cucumber-status--skipped {
+  color: #00A0CC;
+}
+.cucumber-react .cucumber-status--pending {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--undefined {
+  color: #FFAD33;
+}
+.cucumber-react .cucumber-status--ambiguous {
+  color: #F4EBFD;
+}
+.cucumber-react .cucumber-status--failed {
+  color: #BB0000;
+}
+.cucumber-react .cucumber-status--unknown {
+  color: #B6BECB;
+}
+.cucumber-react h1, .cucumber-react h2, .cucumber-react h3 {
+  padding: 0;
+  margin: 0;
+}
+.cucumber-react a {
+  color: inherit;
+}
+.cucumber-react .gherkin-document-list {
+  font: 14px "Open Sans", sans-serif;
+  color: #161C24;
+  background: #fff;
+  overflow-x: hidden;
+}
+.cucumber-react .cucumber-title {
+  margin-top: 0.3em;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.cucumber-react .cucumber-title__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-title__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-tags {
+  padding: 0;
+  margin-bottom: 0;
+}
+.cucumber-react .cucumber-tags .cucumber-tag {
+  display: inline;
+  list-style-type: none;
+  padding: 4px 8px 4px 8px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+}
+.cucumber-react .cucumber-feature__icon {
+  padding-top: 0.35em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-description,
+.cucumber-react .cucumber-children {
+  margin-left: 1em;
+}
+.cucumber-react .cucumber-feature,
+.cucumber-react .cucumber-rule,
+.cucumber-react .cucumber-scenario,
+.cucumber-react .cucumber-background {
+  margin-bottom: 1em;
+}
+.cucumber-react .cucumber-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+.cucumber-react .cucumber-steps .cucumber-step {
+  display: flex;
+}
+.cucumber-react .cucumber-steps .cucumber-step__status {
+  padding-top: 0.2em;
+  padding-right: 0.5em;
+}
+.cucumber-react .cucumber-steps .cucumber-step__content {
+  flex-grow: 1;
+  max-width: calc(100% - 1.5em);
+}
+.cucumber-react .cucumber-steps .cucumber-step__keyword {
+  font-weight: bold;
+}
+.cucumber-react .cucumber-steps .cucumber-step__text {
+  font-weight: normal;
+}
+.cucumber-react .cucumber-steps .cucumber-step__param {
+  font-weight: normal;
+  font-style: italic;
+}
+.cucumber-react .cucumber-table {
+  border-collapse: collapse;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.cucumber-react .cucumber-table__header-cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell {
+  border: 1px solid #4B5662;
+  padding: 0.3em;
+}
+.cucumber-react .cucumber-table__cell__status {
+  padding: 0.5em 3px 3px 3px;
+}
+.cucumber-react .cucumber-table__cell__step {
+  flex-grow: 1;
+}
+.cucumber-react .cucumber-code {
+  padding: 0.25em;
+  background-color: #ebebeb;
+}
+.cucumber-react .cucumber-error {
+  padding: 0.5em;
+  margin: 0;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-no-documents {
+  font: 14px "Open Sans", sans-serif;
+}
+.cucumber-react .cucumber-attachment__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-attachment__image {
+  max-width: 100%;
+  margin-top: 1em;
+}
+.cucumber-react .cucumber-attachment__text {
+  background-color: #ebebeb;
+  padding: 0.5em;
+  overflow-x: auto;
+}
+.cucumber-react .cucumber-anchor {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 0.3em;
+}
+.cucumber-react .cucumber-anchor__link {
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+}
+.cucumber-react .cucumber-anchor__icon {
+  margin-right: 0.5em;
+}
+.cucumber-react .cucumber-anchor:hover a {
+  opacity: 1;
+  width: max-content;
+  transition: all 0.35s ease-in-out;
+}
+.cucumber-react .cucumber-anchor > * {
+  height: 100%;
+  margin-top: 0px;
+}
+
+.cucumber-report-header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font: 11px "Open Sans", sans-serif;
+  margin-bottom: 1em;
+}
+.cucumber-report-header > * {
+  padding: 1em;
+}
+.cucumber-report-header .cucumber-status-filter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-status-filter table {
+  width: 100%;
+}
+.cucumber-report-header .cucumber-execution-data {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cucumber-report-header .cucumber-search-bar {
+  border-right: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search input {
+  padding: 0.4em;
+  border-radius: 0;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-search button {
+  height: 2.2em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar p.help {
+  font-size: 80%;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul {
+  display: inline;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li input {
+  display: inline-block;
+  width: auto;
+  height: 0.6em;
+}
+.cucumber-report-header .cucumber-search-bar form.cucumber-search-bar-filter ul li label {
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cucumber-report-header {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  .cucumber-report-header .cucumber-status-filter {
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-execution-data {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+  }
+  .cucumber-report-header .cucumber-search-bar {
+    grid-column: auto;
+  }
+}
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color: #f4f4f4;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+.accordion__button:hover {
+    background-color: #ddd;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+	</style>
+</head>
+<body>
+<div id="content">
+</div>
+<script>
+window.CUCUMBER_MESSAGES = [{"meta":{"protocolVersion":"15.0.0","implementation":{"name":"cucumber-jvm","version":"6.10.3"},"runtime":{"name":"Java HotSpot(TM) 64-Bit Server VM","version":"11.0.11+9-LTS-194"},"os":{"name":"Windows 10"},"cpu":{"name":"amd64"}}},{"testRunStarted":{"timestamp":{"seconds":"1620707726","nanos":432856700}}},{"source":{"uri":"file:///C:/Users/Daniel%20Risc/eclipse-workspace/ProjetoLivelo/LiveloTeste/src/test/resources/features/teste.feature","data":"#Author: daniel.rlima@hotmail.com\n\n@executa \nFeature: Entrar no site da Livelo\n  Eu como usuário quero acessar o site da livelo para realizar a compra de produtos\n  \n \tBackground: Acessar o site\r\n    Given que eu esteja no site \"https://www.livelo.com.br\"\n\n \tScenario: Adicionar produtos no carrinho\n    When clicar no produto\n    Then adicionar no carrinho\n \n\tScenario: Adicionar panela eletrica no carrinho\n    When clicar na panela eletrica\n    Then adicionar panela no carrinho\n \n  Scenario: Adicionar Brinquedo no carrinho\n    When clicar no brinquedo\n    Then adicionar brinquedo no carrinho\n    \n    ","mediaType":"text/x.cucumber.gherkin+plain"}},{"gherkinDocument":{"uri":"file:///C:/Users/Daniel%20Risc/eclipse-workspace/ProjetoLivelo/LiveloTeste/src/test/resources/features/teste.feature","feature":{"location":{"line":4,"column":1},"tags":[{"location":{"line":3,"column":1},"name":"@executa","id":"3808e187-a826-435f-9bfe-c8825f9efcc3"}],"language":"en","keyword":"Feature","name":"Entrar no site da Livelo","description":"  Eu como usuário quero acessar o site da livelo para realizar a compra de produtos","children":[{"background":{"location":{"line":7,"column":3},"keyword":"Background","name":"Acessar o site","steps":[{"location":{"line":8,"column":5},"keyword":"Given ","text":"que eu esteja no site \"https://www.livelo.com.br\"","id":"cfc61354-6047-4b66-a72f-5c5ea43f501c"}],"id":"929e7459-2882-4fc7-8a95-041e7af7dcbd"}},{"scenario":{"location":{"line":10,"column":3},"keyword":"Scenario","name":"Adicionar produtos no carrinho","steps":[{"location":{"line":11,"column":5},"keyword":"When ","text":"clicar no produto","id":"3c822e7c-63e6-4086-ba9a-17268abbd455"},{"location":{"line":12,"column":5},"keyword":"Then ","text":"adicionar no carrinho","id":"bfc05296-e090-4774-8279-e2d426a4185c"}],"id":"924354a1-f9f4-4e5b-8659-4d80e3e23722"}},{"scenario":{"location":{"line":14,"column":2},"keyword":"Scenario","name":"Adicionar panela eletrica no carrinho","steps":[{"location":{"line":15,"column":5},"keyword":"When ","text":"clicar na panela eletrica","id":"0eed6a13-12f5-49c8-83d1-ef00e298183e"},{"location":{"line":16,"column":5},"keyword":"Then ","text":"adicionar panela no carrinho","id":"a145f859-9bbe-489e-9cae-7722dd462c99"}],"id":"385be14b-f82a-470a-a68c-eedb6f5fe770"}},{"scenario":{"location":{"line":18,"column":3},"keyword":"Scenario","name":"Adicionar Brinquedo no carrinho","steps":[{"location":{"line":19,"column":5},"keyword":"When ","text":"clicar no brinquedo","id":"f9b9aeca-06ca-4bb2-b4c2-22067d7c35ea"},{"location":{"line":20,"column":5},"keyword":"Then ","text":"adicionar brinquedo no carrinho","id":"96279d24-0195-4d07-9b33-51a957c62a4b"}],"id":"f5494b42-aa7f-4533-a852-1d62b64e65d5"}}]},"comments":[{"location":{"line":1,"column":1},"text":"#Author: daniel.rlima@hotmail.com"}]}},{"pickle":{"id":"5f79253c-6c2c-4931-a0f5-edeb3fd34189","uri":"file:///C:/Users/Daniel%20Risc/eclipse-workspace/ProjetoLivelo/LiveloTeste/src/test/resources/features/teste.feature","name":"Adicionar produtos no carrinho","language":"en","steps":[{"text":"que eu esteja no site \"https://www.livelo.com.br\"","id":"e81f56b5-09b1-497e-b76b-77fd1ed844d3","astNodeIds":["cfc61354-6047-4b66-a72f-5c5ea43f501c"]},{"text":"clicar no produto","id":"7bdd1c34-57c7-4d68-afe6-d85188f6391f","astNodeIds":["3c822e7c-63e6-4086-ba9a-17268abbd455"]},{"text":"adicionar no carrinho","id":"acd21dd2-4a1e-4bdc-9479-1f07986ef8c4","astNodeIds":["bfc05296-e090-4774-8279-e2d426a4185c"]}],"tags":[{"name":"@executa","astNodeId":"3808e187-a826-435f-9bfe-c8825f9efcc3"}],"astNodeIds":["924354a1-f9f4-4e5b-8659-4d80e3e23722"]}},{"pickle":{"id":"2929d4af-60b9-4ffe-9814-c49a1d07d3ad","uri":"file:///C:/Users/Daniel%20Risc/eclipse-workspace/ProjetoLivelo/LiveloTeste/src/test/resources/features/teste.feature","name":"Adicionar panela eletrica no carrinho","language":"en","steps":[{"text":"que eu esteja no site \"https://www.livelo.com.br\"","id":"ae727548-bfb4-4004-bffa-2dfa2fe1bc44","astNodeIds":["cfc61354-6047-4b66-a72f-5c5ea43f501c"]},{"text":"clicar na panela eletrica","id":"30fd4dd0-7d8d-4f1a-9ce1-58fa54b68d85","astNodeIds":["0eed6a13-12f5-49c8-83d1-ef00e298183e"]},{"text":"adicionar panela no carrinho","id":"c854fefc-f42d-4c37-bb65-b6937a6b5536","astNodeIds":["a145f859-9bbe-489e-9cae-7722dd462c99"]}],"tags":[{"name":"@executa","astNodeId":"3808e187-a826-435f-9bfe-c8825f9efcc3"}],"astNodeIds":["385be14b-f82a-470a-a68c-eedb6f5fe770"]}},{"pickle":{"id":"2ccbb90f-23ae-4b76-b33c-b920c657596d","uri":"file:///C:/Users/Daniel%20Risc/eclipse-workspace/ProjetoLivelo/LiveloTeste/src/test/resources/features/teste.feature","name":"Adicionar Brinquedo no carrinho","language":"en","steps":[{"text":"que eu esteja no site \"https://www.livelo.com.br\"","id":"c85217fb-7117-4318-a76b-bdf6eb7cd574","astNodeIds":["cfc61354-6047-4b66-a72f-5c5ea43f501c"]},{"text":"clicar no brinquedo","id":"9fcfd920-4560-4376-8233-fec212061f54","astNodeIds":["f9b9aeca-06ca-4bb2-b4c2-22067d7c35ea"]},{"text":"adicionar brinquedo no carrinho","id":"e6d99c17-bcf9-47b7-be07-4436487aa05d","astNodeIds":["96279d24-0195-4d07-9b33-51a957c62a4b"]}],"tags":[{"name":"@executa","astNodeId":"3808e187-a826-435f-9bfe-c8825f9efcc3"}],"astNodeIds":["f5494b42-aa7f-4533-a852-1d62b64e65d5"]}},{"testCase":{"id":"6068e2b0-0cfc-4866-9127-67e551a84feb","pickleId":"5f79253c-6c2c-4931-a0f5-edeb3fd34189","testSteps":[{"id":"7bbb6df4-e859-4246-a03f-910b47bd63b4","pickleStepId":"e81f56b5-09b1-497e-b76b-77fd1ed844d3","stepDefinitionIds":["bb2fe560-5b25-4192-a13c-7b7b3101f62a"],"stepMatchArgumentsLists":[{"stepMatchArguments":[{"parameterTypeName":"string","group":{"start":22,"value":"\"https://www.livelo.com.br\"","children":[{"start":23,"value":"https://www.livelo.com.br","children":[{}]},{"children":[{}]}]}}]}]},{"id":"58447fbc-4bf7-49ad-8661-d067673c52dc","pickleStepId":"7bdd1c34-57c7-4d68-afe6-d85188f6391f","stepDefinitionIds":["13ef6454-6a06-4490-9948-74f36c0f

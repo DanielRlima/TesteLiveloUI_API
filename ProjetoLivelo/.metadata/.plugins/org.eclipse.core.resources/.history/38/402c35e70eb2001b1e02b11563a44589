@@ -1,0 +1,57 @@
+package tests;
+
+import static org.junit.Assert.assertEquals;
+
+import org.json.simple.JSONObject;
+import org.junit.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.PreemptiveAuthSpec;
+import io.restassured.specification.RequestSpecification;
+
+public class Cadastro {
+	
+	@Test
+	public void validarStatusCode() {
+		
+		RequestSpecification request = RestAssured.given().auth().preemptive().basic("inmetrics", "automacao");
+		
+		request.header("Content-Type", "application/json");
+
+		JSONObject json = new JSONObject();
+		
+		
+		 json.put("success", true);
+		 json.put("deck_id", "Teste");
+		 json.put("remaining", 50);
+		 json.put("shuffled", true);
+		
+		
+		request.body(json.toJSONString());
+			
+		Response response = request.post("https://deckofcardsapi.com/api/deck/<INFORMARIDDECK/draw/?count=2");
+			
+		System.out.println(response.asPrettyString());
+			
+		int code = response.getStatusCode();
+		System.out.println("O status code retornando e: " + code);
+		assertEquals(code, 202);
+		
+		
+		long time = cadastro().time();
+		System.out.println("*******time******" + time);
+		System.out.println(time);
+		
+	}
+
+	
+		
+		
+	
+	
+	
+	
+	
+
+}
